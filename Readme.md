@@ -17,8 +17,8 @@ Use main.py script in cmd to run application
 ```bash
 python main.py
 ```
-        add - Write name of movie you would like to add
-        rem - Remove movie saved in database.
+        add - In next line write name of movie you would like to add.
+        rem - In next line write name of movie you would like to remove.
         all - List of all saved movies.
         best - Display the top rated saved IMDB movie.
         hmb - Display the highest-grossing saved movie.

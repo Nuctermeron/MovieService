@@ -23,27 +23,27 @@ while run:
         exit - Exit script
         """)
 
-    elif command.lower() == 'add':
+    elif command.lower().strip() == 'add':
         movie = input("Write name of movie you want to save: ")
         movie_service.add_movie(movie, connector=conn, cursor=c)
 
-    elif command.lower() == 'rem':
+    elif command.lower().strip() == 'rem':
         movie = input("Write name of movie you want to remove: ")
         movie_service.remove_movie(movie, connector=conn, cursor=c)
 
-    elif command.lower() == 'all':
+    elif command.lower().strip() == 'all':
         print(movie_service.movie_list)
 
-    elif command.lower() == 'best':
+    elif command.lower().strip() == 'best':
         movie_service.show_best(connector=conn, cursor=c)
 
-    elif command.lower() == 'hmb':
+    elif command.lower().strip() == 'hmb':
         movie_service.show_high_gross(connector=conn, cursor=c)
 
-    elif command.lower() == 'avg':
+    elif command.lower().strip() == 'avg':
         movie_service.show_average_rating(connector=conn, cursor=c)
 
-    elif command.lower() == 'exit':
+    elif command.lower().strip() == 'exit':
         run = False
 
     conn.commit()

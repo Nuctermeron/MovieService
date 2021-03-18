@@ -2,7 +2,7 @@ import requests
 from movies import select_all_movies, deleteRecord, add_movie, get_best, get_highest_gross, get_average_rating, \
     check_movie
 
-API_KEY = 'PASTE API KEY HERE'  # Write here your API KEY
+API_KEY = 'PASTE YOUR API KEY HERE'  # Write here your API KEY
 URL = f'http://www.omdbapi.com/?apikey={API_KEY}'
 
 
@@ -34,12 +34,16 @@ class MovieService:
                     imdb_rating = float(imdb_rating[0:3])
                 except ValueError:
                     imdb_rating = None
-                try:
-                    highest_gross = float(movie_data['BoxOffice'].replace('$', '').replace(',', ''))
-                except ValueError:
-                    highest_gross = None
-                add_movie(connector=conn, cursor=c, title=title, new_ratings=new_ratings, highest_gross=highest_gross,
-                          imdb_rating=imdb_rating)
+                    print('No IMDB value.')
+                else:
+                    try:
+                        highest_gross = float(movie_data['BoxOffice'].replace('$', '').replace(',', ''))
+                    except (ValueError, KeyError):
+                        highest_gross = None
+                        print('No information about Homebox')
+                    add_movie(connector=conn, cursor=c, title=title, new_ratings=new_ratings, highest_gross=highest_gross,
+                              imdb_rating=imdb_rating)
+                    print(f"{movie} added")
             else:
                 print('Movie already in database.')
 

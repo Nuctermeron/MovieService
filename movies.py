@@ -35,6 +35,7 @@ def deleteRecord(movie, connector, cursor):
     sql_delete_query = """delete from MOVIES where Title = ?"""
     c.execute(sql_delete_query, [movie])
     conn.commit()
+    print(f"{movie} deleted from database or not in database.")
 
 
 def get_best(connector, cursor):

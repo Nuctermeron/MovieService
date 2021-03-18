@@ -2,7 +2,7 @@ import requests
 from movies import select_all_movies, deleteRecord, add_movie, get_best, get_highest_gross, get_average_rating, \
     check_movie
 
-API_KEY = '21de607f'  # Write your API KEY
+API_KEY = 'PASTE API KEY HERE'  # Write here your API KEY
 URL = f'http://www.omdbapi.com/?apikey={API_KEY}'
 
 

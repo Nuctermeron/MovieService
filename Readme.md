@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-Firstly, generate you API key on [this site[(http://www.omdbapi.com/), then open application.py in main folder and paste your API key in API_KEY variable
+Firstly, generate you API key on [this site](http://www.omdbapi.com/), then open application.py in main folder and paste your API key in API_KEY variable
 
 Use main.py script in cmd to run application
 ```bash

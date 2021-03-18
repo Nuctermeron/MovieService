@@ -4,13 +4,15 @@ Project created for recruitment purposes. Application can be used to access OMDB
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements. 
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Usage
+Firstly, generate you API key on [this site](http://www.omdbapi.com/), then open application.py in main folder and paste your API key in API_KEY variable
+
 Use main.py script in cmd to run application
 ```bash
 python main.py
